@@ -146,7 +146,7 @@ nav ul li a:hover::after {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Services section */
@@ -195,7 +195,7 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border-bottom: 3px solid var(--accent-color);
 }
 
@@ -242,7 +242,7 @@ nav ul li a:hover::after {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .profile-info {
@@ -313,7 +313,7 @@ nav ul li a:hover::after {
     margin-bottom: var(--section-spacing);
     position: relative;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .philosophy h3 {
@@ -363,7 +363,7 @@ nav ul li a:hover::after {
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     color: #555555;
 }
 
@@ -384,7 +384,7 @@ nav ul li a:hover::after {
     -webkit-transition: all 0.3s;
     margin-top: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .button:hover {
@@ -392,7 +392,7 @@ nav ul li a:hover::after {
     transform: translateY(-2px);
     -webkit-transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .button.primary {
