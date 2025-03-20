@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBA-Kwaliteitsborging</title>
+    <style>
+        :root {
+            --primary-color: #0066a1;
+            --secondary-color: #f7f7f7;
+            --accent-color: #ff9800;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #005486;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background-color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .hero h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .services {
+            padding: 3rem 0;
+            background-color: var(--secondary-color);
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #00558a;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <h1>PBA-Kwaliteitsborging</h1>
+        <p>Uw partner voor kwaliteitsborging in de bouw</p>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">Over Ons</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h2>De Wet Kwaliteitsborging voor nieuwbouw is een feit!</h2>
+        <p>Professionele kwaliteitsborging voor uw bouwprojecten</p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <div class="service-card">
+            <h3>Wat betekent dit voor u?</h3>
+            <p>Vanaf nu heeft u voor nieuwbouw in gevolgklasse 1 (bijvoorbeeld woningen en eenvoudige bedrijfsgebouwen) een kwaliteitsborger nodig. U kunt ons inhuren als uw kwaliteitsborger!</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Onze kwalificaties</h3>
+            <p>Wij zijn toegelaten tot het Stelsel van Kwaliteitsborging onder toepassing van het instrument Kwaliteitsborging Garantiewaarborg (KGW).</p>
+            <p>U kunt ons vinden in het <a href="https://www.tlokb.nl/register-kwaliteitsborging" target="_blank">register Kwaliteitsborging</a>.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Onze diensten</h3>
+            <ul style="margin-left: 20px;">
+                <li>Kwaliteitsborging voor nieuwbouwprojecten</li>
+                <li>Advies over bouwkwaliteit en regelgeving</li>
+                <li>Begeleiding bij het bouwproces</li>
+                <li>Controle en certificering</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+    <div class="container">
+        <h2>Heeft u nog vragen?</h2>
+        <p>Neem contact met ons op en mogelijk kunnen wij iets betekenen voor elkaar!</p>
+        <a href="#contact" class="button">Contact opnemen</a>
+    </div>
+</section>
+
+<!-- Footer with Contact -->
+<footer id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Ing. Misha Pullens</p>
+            <p>Directeur</p>
+            <p>Email: info@pba-kwaliteitsborging.nl</p>
+            <p>Telefoon: +31 (0) XX XXX XX XX</p>
+        </div>
+        <p style="margin-top: 2rem;">Met vriendelijke bouwgroet,<br>Ing. Misha Pullens</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over Ons - PBA-Kwaliteitsborging</title>
+  <style>
+    :root {
+      --primary-color: #0066a1;
+      --secondary-color: #f7f7f7;
+      --accent-color: #ff9800;
+      --text-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005486;
+      padding: 0.5rem 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    .page-title {
+      background-color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .page-title h2 {
+      color: var(--primary-color);
+    }
+
+    .profile-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .profile-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .profile-info {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .profile-info h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .profile-info .title {
+      font-style: italic;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .qualifications {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .qualifications h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .philosophy {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 2rem;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .philosophy h3 {
+      margin-bottom: 1rem;
+    }
+
+    .contact-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #00558a;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <div class="container">
+    <h1>PBA-Kwaliteitsborging</h1>
+    <p>Uw partner voor kwaliteitsborging in de bouw</p>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">Over Ons</a></li>
+  </ul>
+</nav>
+
+<!-- Page Title -->
+<section class="page-title">
+  <div class="container">
+    <h2>Over Ons</h2>
+  </div>
+</section>
+
+<div class="container">
+  <!-- Profile Section -->
+  <section class="profile-section">
+    <div class="profile-image">
+      <img src="/api/placeholder/400/320" alt="Ing. Misha Pullens" />
+    </div>
+    <div class="profile-info">
+      <h3>Ing. Misha Pullens</h3>
+      <span class="title">Directeur en Kwaliteitsborger</span>
+      <p>
+        Als oprichter en directeur van PBA-Kwaliteitsborging breng ik meer dan 15 jaar ervaring in de bouwsector met me mee. Mijn passie voor kwaliteit en bouwkundige excellentie heeft me ertoe gebracht om deze gespecialiseerde dienst op te richten.
+      </p>
+      <p>
+        Met de nieuwe Wet Kwaliteitsborging voor het bouwen, is het mijn missie om opdrachtgevers te ondersteunen bij het realiseren van bouwprojecten die niet alleen aan alle wettelijke eisen voldoen, maar ook van superieure kwaliteit zijn.
+      </p>
+      <p>
+        Mijn achtergrond als bouwkundig ingenieur in combinatie met praktische ervaring als bouwinspecteur voor verschillende gemeenten (waaronder Den Helder, Almere, Dijk & Waard en Alkmaar) stelt me in staat om zowel technische als praktische aspecten van bouwkwaliteit te begrijpen en te beoordelen.
+      </p>
+      <p>
+        Naast PBA-Kwaliteitsborging ben ik ook de eigenaar van Pullens Bouwtoezicht & Advies (opgericht in 2017), waar ik mijn expertise inzet als bouwinspecteur en adviseur.
+      </p>
+    </div>
+  </section>
+
+  <!-- Qualifications Section -->
+  <section class="qualifications">
+    <h3>Kwalificaties & Ervaring</h3>
+    <ul style="margin-left: 20px;">
+      <li>Gecertificeerd Kwaliteitsborger onder het instrument Kwaliteitsborging Garantiewaarborg (KGW)</li>
+      <li>Eigenaar PBA Kwaliteitsborging (apr. 2023 - heden)</li>
+      <li>Eigenaar Pullens Bouwtoezicht & Advies (mrt. 2017 - heden)</li>
+      <li>Ruime ervaring als bouwinspecteur voor verschillende gemeenten (Dijk & Waard, Alkmaar, Almere, Texel, Den Helder)</li>
+      <li>Specialistische kennis van het Nederlandse Bouwbesluit en aanverwante regelgeving</li>
+    </ul>
+
+    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 0.75rem;">Opleiding</h4>
+    <ul style="margin-left: 20px;">
+      <li>Hogeschool van Amsterdam - Ingenieur (ing), Bouwkunde (2003 - 2008)</li>
+      <li>Pieter Nieuwland College - VWO (1990 - 1997)</li>
+    </ul>
+
+    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 0.75rem;">Relevante Cursussen</h4>
+    <ul style="margin-left: 20px;">
+      <li>ABW1 & ABW2</li>
+      <li>Asbestdeskundige</li>
+      <li>Integraal toezicht</li>
+      <li>AutoCAD 2002 & 2006</li>
+    </ul>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy">
+    <h3>Mijn Filosofie</h3>
+    <p>
+      "Kwaliteit is geen toeval, maar het resultaat van intelligente inspanning. Bij PBA-Kwaliteitsborging geloven wij dat kwaliteitsborging meer is dan alleen controleren - het is een proactieve benadering die vanaf de eerste ontwerpfase tot en met de oplevering en het gebruik van een gebouw loopt."
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h3>Direct Contact</h3>
+    <p>Heeft u specifieke vragen of wilt u persoonlijk advies? Neem dan direct contact met mij op:</p>
+    <p>Email: m.pullens@pba-kwaliteitsborging.nl</p>
+    <p>Telefoon: +31 (0) XX XXX XX XX</p>
+    <a href="mailto:m.pullens@pba-kwaliteitsborging.nl" class="button">Email Mij</a>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 PBA-Kwaliteitsborging. Alle rechten voorbehouden.</p>
+    <p>Met vriendelijke bouwgroet,<br>Ing. Misha Pullens</p>
+  </div>
+</footer>
+</body>
+</html>
