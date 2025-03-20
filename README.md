@@ -1,46 +1,114 @@
 # PBA-Kwaliteitsborging
 
-Een professionele website voor PBA-Kwaliteitsborging, uw partner voor kwaliteitsborging in de bouw.
+Een professionele website voor PBA-Kwaliteitsborging, uw partner voor kwaliteitsborging in de bouw onder de nieuwe Wet Kwaliteitsborging voor het bouwen.
 
 ## Project Beschrijving
 
-Dit project bevat de broncode voor de website van PBA-Kwaliteitsborging, een bedrijf gespecialiseerd in kwaliteitsborging voor bouwprojecten onder de nieuwe Wet Kwaliteitsborging voor het bouwen. De website is ontwikkeld om informatie te verstrekken over de diensten, kwalificaties en contactmogelijkheden van het bedrijf.
+Deze repository bevat de bronbestanden voor de website van PBA-Kwaliteitsborging, een gecertificeerd kwaliteitsborger geregistreerd bij TloKB. De website is ontwikkeld om informatie te verstrekken over kwaliteitsborging in de bouw, specifiek gericht op nieuwbouwprojecten in gevolgklasse 1 volgens de nieuwe Wet Kwaliteitsborging voor het bouwen die per 1 juli 2023 in werking is getreden.
 
-## Eigenaar
+## Bedrijfsgegevens
 
 - **Eigenaar**: Ing. Misha Pullens
+- **Functie**: Directeur en Kwaliteitsborger
 - **Bedrijf**: PBA-Kwaliteitsborging
 - **KvK-nummer**: 68105886
+- **Website**: [pba-kb.nl](https://pba-kb.nl)
+- **Email**: info@pba-kwaliteitsborging.nl
+- **Telefoon**: +31 (0) 6 54 91 65 08
+
+## Kwalificaties en Certificeringen
+
+- Gecertificeerd Kwaliteitsborger onder het instrument Kwaliteitsborging Garantiewaarborg (KGW)
+- Officieel geregistreerd bij TloKB voor alle toepassingsgebieden in gevolgklasse 1:
+  - 1A: Eengezinswoningen
+  - 1B: Woonboten
+  - 1C: Vakantiehuisjes
+  - 1D: Bedrijfsgebouwen (hoofdgebouw)
+  - 1E: Bedrijfsgebouwen (nevenfunctie)
+  - 1F: Fiets- en voetgangersbruggen
+  - 1G: Overige bouwwerken
+- [Officiële registratie in TloKB register](https://register.tlokb.nl/kb/kwaliteitsborger/pba-kwaliteitsborging)
 
 ## Projectstructuur
 
 ```
 pba/
-├── about/                # Over Ons pagina
+├── .htaccess               # Apache-configuratie voor caching en compressie
+├── .idea/                  # IntelliJ IDEA configuratiebestanden
+├── CNAME                   # GitHub Pages domeinverwijzing
+├── LICENSE                 # Apache 2.0 licentie
+├── README.md               # Dit bestand
+├── about/                  # Over Ons pagina
 │   └── index.html
-├── content/              # Statische bestanden
-│   ├── css/              # Stylesheets
-│   │   └── style.css
-│   └── img/              # Afbeeldingen (niet meegeleverd in repository)
-├── privacy-policy/       # Privacyverklaring pagina
+├── content/                # Statische bestanden
+│   ├── css/                # Stylesheets
+│   │   ├── style.css       # Hoofdstijlbestand
+│   │   └── style-safari.css # Safari-specifieke fixes
+│   ├── img/                # Afbeeldingen (niet in repository)
+│   └── js/                 # JavaScript-bestanden
+│       └── script.js       # Script voor email-bescherming
+├── index.html              # Homepage met diensten en contactformulier
+├── privacy-policy/         # Privacyverklaring pagina
 │   └── index.html
-├── .idea/                # IntelliJ IDEA configuraties
-├── LICENSE               # Apache 2.0 licentie
-├── README.md             # Dit bestand
-└── index.html            # Homepage
+├── robots.txt              # Instructies voor zoekmachines
+└── sitemap.xml             # XML-sitemap voor zoekmachines
 ```
 
 ## Technologieën
 
 - HTML5
 - CSS3
+- JavaScript (minimaal)
 - Google Forms (voor contactformulier)
+- Google Analytics (voor website-analyse)
+- GitHub Pages (hosting)
+- CookieChimp (cookietoestemming)
 
 ## Pagina's
 
-1. **Homepage** (`/index.html`): Hoofdpagina met diensten en contactformulier
-2. **Over Ons** (`/about/index.html`): Informatie over de eigenaar, kwalificaties en ervaring
-3. **Privacyverklaring** (`/privacy-policy/index.html`): Wettelijke informatie over gegevensverwerking
+1. **Homepage** (`/index.html`)
+   - Introductie tot PBA-Kwaliteitsborging
+   - Diensten: Kwaliteitsborging, Bouwadvies, Procesbegeleiding, Certificering
+   - FAQ-sectie over Wet Kwaliteitsborging
+   - Contactformulier (Google Forms)
+   - Schema.org gestructureerde data voor betere SEO
+
+2. **Over Ons** (`/about/index.html`)
+   - Profiel van Ing. Misha Pullens
+   - Kwalificaties en certificeringen
+   - Werkervaring en opleiding
+   - Filosofie over kwaliteitsborging
+
+3. **Privacyverklaring** (`/privacy-policy/index.html`)
+   - Gedetailleerde informatie over gegevensverwerking
+   - Cookiebeleid
+   - Rechten van bezoekers
+   - Beveiligingsmaatregelen
+
+## Optimalisaties
+
+De website bevat verschillende optimalisaties:
+
+- Snelle laadtijden door CSS/JS optimalisatie
+- Responsive design voor alle schermformaten
+- Safari-specifieke CSS-fixes
+- Cache-controle via .htaccess
+- GZIP-compressie voor snellere overdracht
+- Geoptimaliseerde afbeeldingen (WebP-formaat)
+- Gestructureerde data voor SEO
+- Local Business Schema.org markup
+- FAQPage Schema.org markup
+- Google Analytics integratie met privacy-vriendelijke instellingen
+
+## SEO-optimalisatie
+
+- Meta-tags en beschrijvingen voor alle pagina's
+- Open Graph-tags voor sociale media
+- Canonieke URL's
+- Sitemap.xml en robots.txt
+- Gestructureerde Schema.org-data
+- FAQ-sectie voor featured snippets in Google
+- Semantische HTML-structuur
 
 ## Lokaal Ontwikkelen
 
@@ -56,10 +124,10 @@ Om dit project lokaal te ontwikkelen:
 
 3. Start een lokale webserver. Bijvoorbeeld met Python:
    ```
-   # Als je Python 3 hebt
+   # Python 3
    python -m http.server
    
-   # Als je Python 2 hebt
+   # Python 2
    python -m SimpleHTTPServer
    ```
 
@@ -67,18 +135,23 @@ Om dit project lokaal te ontwikkelen:
 
 ## Deployment
 
-De website kan worden gedeployed naar elke standaard webhosting-dienst die HTML, CSS en afbeeldingen ondersteunt. Upload simpelweg alle bestanden naar de root directory van je webserver.
+De website is live op [pba-kb.nl](https://pba-kb.nl) en wordt gehost via GitHub Pages. Voor deployment:
+
+1. Push wijzigingen naar de main-branch
+2. GitHub Pages zal automatisch de website updaten
 
 ## Contactformulier
 
-Het contactformulier maakt gebruik van Google Forms. Het formulier is geïntegreerd via een iframe. Om het formulier aan te passen, update de iframe-URL in `index.html`.
+Het contactformulier maakt gebruik van Google Forms. Het formulier is geïntegreerd via een iframe in `index.html`. Om het formulier aan te passen, update de iframe-URL.
 
-## TODO
+## Toekomstige Verbeteringen
 
-- [ ] Professionele afbeeldingen toevoegen
-- [ ] SEO optimalisatie
-- [ ] Responsiveness verbeteren voor kleine schermen
-- [ ] Plaats een echte inspirerende quote in de "Mijn Filosofie" sectie
+- [ ] Toevoegen van een blog/nieuws-sectie
+- [ ] Testimonial-sectie van tevreden klanten
+- [ ] Verbeterde mobiele navigatie
+- [ ] Meer visuele voorbeelden van bouwprojecten
+- [ ] Performance optimalisaties voor Core Web Vitals
+- [ ] Taalselectie voor meertalige ondersteuning
 
 ## Licentie
 
