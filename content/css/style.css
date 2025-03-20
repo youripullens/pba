@@ -43,7 +43,7 @@ header {
     background-color: var(--primary-color);
     color: var(--light-text);
     padding: 1.5rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -139,7 +139,7 @@ nav ul li a:hover::after {
 .hero-image img {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Services section */
@@ -183,7 +183,7 @@ nav ul li a:hover::after {
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid var(--accent-color);
 }
 
@@ -225,7 +225,7 @@ nav ul li a:hover::after {
 .profile-image img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .profile-info {
@@ -294,7 +294,7 @@ nav ul li a:hover::after {
     border-radius: 8px;
     margin-bottom: var(--section-spacing);
     position: relative;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .philosophy h3 {
@@ -343,7 +343,7 @@ nav ul li a:hover::after {
     background-color: var(--secondary-color);
     padding: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     color: #555555;
 }
 
@@ -362,13 +362,13 @@ nav ul li a:hover::after {
     text-decoration: none;
     transition: all 0.3s;
     margin-top: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .button.primary {
@@ -444,7 +444,7 @@ footer {
     margin-top: 3rem;
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .signature p {
@@ -458,8 +458,8 @@ footer {
     padding: 2.5rem;
     max-width: 800px;
     margin: 0 auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .form-intro {
@@ -504,7 +504,7 @@ footer {
 
 .faq-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .faq-item h3 {
@@ -518,58 +518,89 @@ footer {
     color: var(--gray-text);
 }
 
-/* Responsive */
+/* Base Mobile  */
 @media (max-width: 768px) {
-    :root {
-        --section-spacing: 3rem;
-    }
-
+    /* Header  */
     .header-content {
         flex-direction: column;
         text-align: center;
+        padding: 1rem 0;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
     }
 
     nav {
-        margin-top: 1.5rem;
         width: 100%;
+        margin-top: 1rem;
     }
 
     nav ul {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     nav ul li {
-        margin: 0 1rem;
+        margin: 0.5rem 0.8rem;
     }
 
+    /* Hero section  */
     .hero {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
 
     .hero-content {
         flex-direction: column;
-        text-align: center;
+        gap: 2rem;
     }
 
     .hero-text h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
 
     .hero-image {
         order: -1;
+        margin-bottom: 1rem;
     }
 
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Services grid  */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    /* Profile section  */
     .profile-content {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .profile-image {
-        margin-bottom: 2rem;
+        max-width: 250px;
+        margin: 0 auto 2rem;
     }
 
+    /* Qualification grid  */
+    .qualification-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Form container  */
     .google-form-container {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .responsive-iframe-container {
@@ -577,6 +608,171 @@ footer {
     }
 
     .responsive-iframe-container iframe.google-form {
-        min-height: 800px;
+        min-height: 700px;
     }
+
+    /* Footer  */
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-info {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-info h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Philosophy section  */
+    .philosophy {
+        padding: 2rem 1.5rem;
+    }
+
+    .philosophy p {
+        font-size: 1.1rem;
+    }
+
+    /* FAQ section  */
+    .faq-item {
+        padding: 1.25rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    /* Container padding  */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Further reduce font sizes */
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-text p, .service-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Adjust button  */
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Compact header  */
+    .logo h1 {
+        font-size: 1.4rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .logo p {
+        font-size: 0.8rem;
+    }
+
+    /* optimize iframe container */
+    .responsive-iframe-container {
+        padding-top: 180%;
+    }
+
+    /* form container */
+    .google-form-container {
+        padding: 1rem;
+    }
+
+    /* page headers */
+    .page-header {
+        padding: 2rem 0;
+    }
+
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+
+    /* privacy policy spacing */
+    .privacy-policy section h3 {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+    }
+
+    /* navigation */
+    nav ul li {
+        margin: 0.4rem 0.6rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Fix for top navigation on very small screens */
+@media (max-width: 360px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+}
+
+/* form responsiveness */
+.responsive-iframe-container iframe.google-form {
+    width: 100% !important;
+    border: none !important;
+}
+
+/* Touch-friendly  */
+@media (hover: none) {
+    .button,
+    .service-card,
+    nav ul li a {
+        padding: calc(0.9rem + 2px) calc(2rem + 2px);
+    }
+
+    nav ul li a {
+        padding: 0.8rem 0.5rem;
+        display: inline-block;
+    }
+
+    .service-card {
+        padding: calc(2.5rem + 5px);
+    }
+
+    /* Reduce hover effects that don't work well on touch */
+    .service-card:hover,
+    .button:hover {
+        transform: none;
+    }
+}
+
+/* Fix for iOS viewport height issue */
+@supports (-webkit-touch-callout: none) {
+    .hero,
+    .responsive-iframe-container {
+        min-height: -webkit-fill-available;
+    }
+
+    .hero {
+        height: auto;
+    }
+}
+
+/* Fix for form on mobile devices */
+input,
+textarea,
+select,
+button {
+    font-size: 16px !important; /* Prevents iOS auto-zoom on input fields */
 }
