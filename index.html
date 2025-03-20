@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PBA-Kwaliteitsborging | Uw partner voor kwaliteitsborging in de bouw</title>
     <link rel="stylesheet" href="content/css/style.css">
+    <link rel="stylesheet" href="content/css/style-safari.css">
     <link rel="icon" href="content/img/pba-kwaliteitsborging-icon.webp" type="image/icon type">
 </head>
 <!-- Google tag (gtag.js) -->
@@ -141,5 +142,15 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setVH();
+        window.addEventListener('resize', setVH);
+    });
+</script>
 </body>
 </html>
