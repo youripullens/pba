@@ -246,6 +246,49 @@
                 order: -1;
             }
         }
+
+        .google-form-container {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .form-intro {
+            margin-bottom: 1.5rem;
+        }
+
+        .responsive-iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* For forms with fewer fields use a smaller percentage */
+        }
+
+        .responsive-iframe-container iframe.google-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 650px; /* Adjust based on your form length */
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .google-form-container {
+                padding: 1.5rem;
+            }
+
+            .responsive-iframe-container {
+                padding-top: 150%; /* More height on mobile */
+            }
+
+            .responsive-iframe-container iframe.google-form {
+                min-height: 800px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -310,7 +353,29 @@
     <div class="container">
         <h2>Klaar voor kwaliteitsborging?</h2>
         <p>Als gecertificeerd kwaliteitsborger onder het instrument Kwaliteitsborging Garantiewaarborg (KGW) staan wij voor u klaar. Neem contact met ons op voor een vrijblijvend gesprek.</p>
-        <a href="#contact" class="button">Direct contact opnemen</a>
+        <!-- This is the HTML section to add to your page where you want the contact form -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Neem Contact Op</h2>
+
+                <div class="google-form-container">
+                    <div class="form-intro">
+                        <p>Heeft u vragen over kwaliteitsborging of wilt u een vrijblijvend gesprek? Vul onderstaand formulier in en wij nemen zo spoedig mogelijk contact met u op.</p>
+                    </div>
+
+                    <div class="responsive-iframe-container">
+                        <iframe
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSfJ6FGFH-_wys93vVeRJv_2IZtAUM_YrluRci6bhX-T6OIpOw/viewform?embedded=true"
+                                class="google-form"
+                                frameborder="0"
+                                marginheight="0"
+                                marginwidth="0">
+                            Laden...
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </section>
 
