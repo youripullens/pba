@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://cookiechimp.com">
     <link rel="preconnect" href="https://docs.google.com">
 
-    <!-- Kritische CSS inline -->
+    <!-- Critical CSS inline -->
     <style>
         :root {
             --primary-color: #0057a1;
@@ -71,12 +71,13 @@
         }
     </style>
 
-    <!-- Resterende CSS -->
-    <link rel="stylesheet" href="content/css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="content/css/style-safari.css" media="print" onload="this.media='all'">
+    <!-- Preload and link to the  CSS file -->
+    <link rel="preload" href="content/css/style.css" as="style">
+    <link rel="stylesheet" href="content/css/style.css">
+    <script src="content/js/script.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
-<script async defer src="https://www.googletagmanager.com/gtag/js?id=G-9V0G6JW824"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9V0G6JW824"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -115,7 +116,7 @@
             <a href="#contact" class="button">Neem contact op</a>
         </div>
         <div class="hero-image">
-            <img src="content/img/pba-kwaliteitsborging-hero.jpg"
+            <img src="content/img/home-page-hero.webp"
                  alt="PBA-Kwaliteitsborging inspectiemoment op bouwplaats - Kwaliteitsborging voor nieuwbouwprojecten"
                  loading="lazy"/>
         </div>
@@ -245,7 +246,7 @@
                 <h3>Contact Informatie</h3>
                 <div class="contact-details">
                     <p><strong>Ing. Misha Pullens</strong> - Directeur</p>
-                    <p>Email: info@pba-kwaliteitsborging.nl</p>
+                    <p>Email: <span class="protected-email" data-user="info" data-domain="pba-kwaliteitsborging.nl"></span></p>
                     <p>Telefoon: +31 (0) 6 54 91 65 08</p>
                 </div>
             </div>

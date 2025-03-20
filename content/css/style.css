@@ -48,6 +48,8 @@ header {
 
 .header-content {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -77,6 +79,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     padding: 0.5rem 0;
     position: relative;
 }
@@ -94,6 +97,7 @@ nav ul li a::after {
     left: 0;
     background-color: var(--light-text);
     transition: width 0.3s;
+    -webkit-transition: width 0.3s;
 }
 
 nav ul li a:hover::after {
@@ -109,6 +113,8 @@ nav ul li a:hover::after {
 
 .hero-content {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
@@ -140,6 +146,7 @@ nav ul li a:hover::after {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 /* Services section */
@@ -162,6 +169,7 @@ nav ul li a:hover::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     width: 80px;
     height: 3px;
     background-color: var(--accent-color);
@@ -169,6 +177,7 @@ nav ul li a:hover::after {
 
 .services-grid {
     display: grid;
+    display: -webkit-grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
@@ -178,12 +187,15 @@ nav ul li a:hover::after {
     border-radius: 8px;
     padding: 2.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
+    -webkit-transition: -webkit-transform 0.3s, box-shadow 0.3s;
     border-bottom: 3px solid transparent;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     border-bottom: 3px solid var(--accent-color);
 }
 
@@ -199,6 +211,8 @@ nav ul li a:hover::after {
     padding: 3rem 0;
     margin-bottom: var(--section-spacing);
     text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .page-header h2 {
@@ -213,6 +227,8 @@ nav ul li a:hover::after {
 
 .profile-content {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
     gap: 3rem;
     align-items: flex-start;
 }
@@ -226,6 +242,7 @@ nav ul li a:hover::after {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .profile-info {
@@ -259,6 +276,7 @@ nav ul li a:hover::after {
 
 .qualification-grid {
     display: grid;
+    display: -webkit-grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
@@ -295,6 +313,7 @@ nav ul li a:hover::after {
     margin-bottom: var(--section-spacing);
     position: relative;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .philosophy h3 {
@@ -344,6 +363,7 @@ nav ul li a:hover::after {
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     color: #555555;
 }
 
@@ -361,14 +381,18 @@ nav ul li a:hover::after {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     margin-top: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .button:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .button.primary {
@@ -409,6 +433,8 @@ footer {
 
 .footer-content {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 3rem;
@@ -471,6 +497,7 @@ footer {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .responsive-iframe-container iframe.google-form {
@@ -516,6 +543,43 @@ footer {
 .faq-item p {
     margin-bottom: 0.5rem;
     color: var(--gray-text);
+}
+
+/* Input appearance fixes */
+input,
+textarea,
+select,
+button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-size: 16px !important; /* Prevents iOS auto-zoom on input fields */
+}
+
+/* Backdrop filter support */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .footer-content {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* iOS viewport height fix */
+@supports (-webkit-touch-callout: none) {
+    .hero,
+    .responsive-iframe-container {
+        min-height: -webkit-fill-available;
+    }
+
+    .hero {
+        height: auto;
+    }
+}
+
+/* Safari CTA background fix */
+@supports (-webkit-overflow-scrolling: touch) {
+    .cta {
+        background-attachment: scroll;
+    }
 }
 
 /* Base Mobile  */
@@ -640,6 +704,12 @@ footer {
     .faq-item {
         padding: 1.25rem;
     }
+
+    /* Responsive iframe container height fix */
+    .responsive-iframe-container {
+        height: calc(100vh - 120px);
+        height: calc(var(--vh, 1vh) * 100 - 120px);
+    }
 }
 
 /* Extra Small Devices */
@@ -755,24 +825,4 @@ footer {
     .button:hover {
         transform: none;
     }
-}
-
-/* Fix for iOS viewport height issue */
-@supports (-webkit-touch-callout: none) {
-    .hero,
-    .responsive-iframe-container {
-        min-height: -webkit-fill-available;
-    }
-
-    .hero {
-        height: auto;
-    }
-}
-
-/* Fix for form on mobile devices */
-input,
-textarea,
-select,
-button {
-    font-size: 16px !important; /* Prevents iOS auto-zoom on input fields */
 }
