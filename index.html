@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PBA-Kwaliteitsborging</title>
+    <title>PBA-Kwaliteitsborging | Uw partner voor kwaliteitsborging in de bouw</title>
     <style>
         :root {
             --primary-color: #0066a1;
@@ -20,7 +20,7 @@
         }
 
         body {
-            background-color: var(--secondary-color);
+            background-color: white;
             color: var(--text-color);
             line-height: 1.6;
         }
@@ -34,29 +34,37 @@
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 2rem 0;
-            text-align: center;
+            padding: 1.5rem 0;
         }
 
-        nav {
-            background-color: #005486;
-            padding: 0.5rem 0;
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
             list-style: none;
         }
 
         nav ul li {
-            margin: 0 1rem;
+            margin-left: 2rem;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
@@ -65,145 +73,269 @@
         }
 
         .hero {
-            background-color: white;
-            padding: 3rem 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: var(--secondary-color);
+            padding: 4rem 0;
+            margin-bottom: 3rem;
         }
 
-        .hero h2 {
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h2 {
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .services {
-            padding: 3rem 0;
-            background-color: var(--secondary-color);
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 1.8rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: var(--secondary-color);
+            border-radius: 8px;
             padding: 2rem;
-            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .service-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
-        }
-
-        .cta {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
         .button {
             display: inline-block;
-            background-color: var(--primary-color);
+            background-color: var(--accent-color);
             color: white;
-            padding: 0.8rem 1.5rem;
-            margin-top: 1rem;
-            text-decoration: none;
-            border-radius: 5px;
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .button:hover {
-            background-color: #00558a;
+            background-color: #e08600;
+            transform: translateY(-2px);
+        }
+
+        .button.primary {
+            background-color: var(--primary-color);
+        }
+
+        .button.primary:hover {
+            background-color: #005486;
+        }
+
+        .cta {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
         }
 
         footer {
             background-color: var(--primary-color);
             color: white;
-            text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
-        .contact-info {
-            margin-top: 1rem;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-info h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-details {
+            margin-top: 1.5rem;
+        }
+
+        .signature {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 1rem;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-image {
+                order: -1;
+            }
         }
     </style>
 </head>
 <body>
 <!-- Header -->
 <header>
-    <div class="container">
-        <h1>PBA-Kwaliteitsborging</h1>
-        <p>Uw partner voor kwaliteitsborging in de bouw</p>
+    <div class="container header-content">
+        <div class="logo">
+            <h1>PBA-Kwaliteitsborging</h1>
+            <p>Uw partner voor kwaliteitsborging in de bouw</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">Over Ons</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Over Ons</a></li>
-    </ul>
-</nav>
-
 <!-- Hero Section -->
 <section class="hero">
-    <div class="container">
-        <h2>De Wet Kwaliteitsborging voor nieuwbouw is een feit!</h2>
-        <p>Professionele kwaliteitsborging voor uw bouwprojecten</p>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h2>Professionele kwaliteitsborging voor uw bouwprojecten</h2>
+            <p>De Wet Kwaliteitsborging voor nieuwbouw vereist een gecertificeerde kwaliteitsborger. Wij zijn uw betrouwbare partner in dit proces, geregistreerd in het officiële register Kwaliteitsborging.</p>
+            <a href="#contact" class="button">Neem contact op</a>
+        </div>
+        <div class="hero-image">
+            <img src="/api/placeholder/400/320" alt="Kwaliteitsborging in de bouw" />
+        </div>
     </div>
 </section>
 
 <!-- Services Section -->
 <section class="services">
     <div class="container">
-        <div class="service-card">
-            <h3>Wat betekent dit voor u?</h3>
-            <p>Vanaf nu heeft u voor nieuwbouw in gevolgklasse 1 (bijvoorbeeld woningen en eenvoudige bedrijfsgebouwen) een kwaliteitsborger nodig. U kunt ons inhuren als uw kwaliteitsborger!</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Onze kwalificaties</h3>
-            <p>Wij zijn toegelaten tot het Stelsel van Kwaliteitsborging onder toepassing van het instrument Kwaliteitsborging Garantiewaarborg (KGW).</p>
-            <p>U kunt ons vinden in het <a href="https://www.tlokb.nl/register-kwaliteitsborging" target="_blank">register Kwaliteitsborging</a>.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Onze diensten</h3>
-            <ul style="margin-left: 20px;">
-                <li>Kwaliteitsborging voor nieuwbouwprojecten</li>
-                <li>Advies over bouwkwaliteit en regelgeving</li>
-                <li>Begeleiding bij het bouwproces</li>
-                <li>Controle en certificering</li>
-            </ul>
+        <h2 class="section-title">Onze Diensten</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Kwaliteitsborging</h3>
+                <p>Professionele kwaliteitsborging voor al uw nieuwbouwprojecten in gevolgklasse 1, volledig conform de nieuwe wetgeving.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bouwadvies</h3>
+                <p>Deskundig advies over bouwkwaliteit, regelgeving en implementatie van kwaliteitseisen in uw project.</p>
+            </div>
+            <div class="service-card">
+                <h3>Procesbegeleiding</h3>
+                <p>Complete begeleiding tijdens het gehele bouwproces, van ontwerp tot en met oplevering.</p>
+            </div>
+            <div class="service-card">
+                <h3>Certificering</h3>
+                <p>Officiële controle en certificering van uw bouwproject volgens de geldende kwaliteitsnormen.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Call to Action -->
+<!-- CTA Section -->
 <section class="cta">
     <div class="container">
-        <h2>Heeft u nog vragen?</h2>
-        <p>Neem contact met ons op en mogelijk kunnen wij iets betekenen voor elkaar!</p>
-        <a href="#contact" class="button">Contact opnemen</a>
+        <h2>Klaar voor kwaliteitsborging?</h2>
+        <p>Als gecertificeerd kwaliteitsborger onder het instrument Kwaliteitsborging Garantiewaarborg (KGW) staan wij voor u klaar. Neem contact met ons op voor een vrijblijvend gesprek.</p>
+        <a href="#contact" class="button">Direct contact opnemen</a>
     </div>
 </section>
 
 <!-- Footer with Contact -->
 <footer id="contact">
     <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Ing. Misha Pullens</p>
-            <p>Directeur</p>
-            <p>Email: info@pba-kwaliteitsborging.nl</p>
-            <p>Telefoon: +31 (0) XX XXX XX XX</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Over Ons</h3>
+                <p>PBA-Kwaliteitsborging is uw betrouwbare partner voor kwaliteitsborging in de bouw, met meer dan 15 jaar ervaring in de sector.</p>
+                <p><a href="/about" style="color: white; text-decoration: underline;">Lees meer over ons</a></p>
+            </div>
+            <div class="footer-info">
+                <h3>Contact Informatie</h3>
+                <div class="contact-details">
+                    <p><strong>Ing. Misha Pullens</strong> - Directeur</p>
+                    <p>Email: info@pba-kwaliteitsborging.nl</p>
+                    <p>Telefoon: +31 (0) XX XXX XX XX</p>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 2rem;">Met vriendelijke bouwgroet,<br>Ing. Misha Pullens</p>
+        <div class="signature">
+            <p>&copy; 2025 PBA-Kwaliteitsborging. Alle rechten voorbehouden.</p>
+            <p>Met vriendelijke bouwgroet,<br>Ing. Misha Pullens</p>
+        </div>
     </div>
 </footer>
 </body>
