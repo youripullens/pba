@@ -1,38 +1,58 @@
-// prevent email snooping
-document.addEventListener('DOMContentLoaded', function () {
-    const emailElements = document.querySelectorAll('.protected-email');
-    emailElements.forEach(function (element) {
-        const user = element.getAttribute('data-user');
-        const domain = element.getAttribute('data-domain');
-        element.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
-    });
-});
+// Initialize all functionality when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Email protection functionality
+    const protectEmails = () => {
+        const emailElements = document.querySelectorAll('.protected-email');
+        if (emailElements.length === 0) return;
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-    const formMessage = document.getElementById('form-message');
+        emailElements.forEach(element => {
+            const user = element.getAttribute('data-user');
+            const domain = element.getAttribute('data-domain');
+            if (user && domain) {
+                const emailAddress = `${user}@${domain}`;
+                element.innerHTML = `<a href="mailto:${emailAddress}">${emailAddress}</a>`;
+            }
+        });
+    };
 
-    form.addEventListener('submit', function (e) {
-        // Add loading state
-        form.classList.add('form-loading');
+    // Contact form functionality
+    const setupContactForm = () => {
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
 
-        // Remove message classes
-        formMessage.classList.remove('success', 'error');
-        formMessage.textContent = '';
+        if (!form || !formMessage) return;
 
-        // TODO: Client-side validation here
+        form.addEventListener('submit', () => {
+            // Add loading state
+            form.classList.add('form-loading');
 
-        // Form submission will be handled by Web3Forms
-        setTimeout(function () {
-            // This timeout is just for demo purposes
-            // Web3Forms will handle the actual redirect
-        }, 1000);
-    });
+            // Clear previous messages
+            formMessage.classList.remove('success', 'error');
+            formMessage.textContent = '';
 
-    // Check for URL parameters to show success message if redirected back
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-        formMessage.textContent = 'Uw bericht is succesvol verzonden. Wij nemen zo spoedig mogelijk contact met u op.';
-        formMessage.classList.add('success');
-    }
+            // Form submission is handled by Web3Forms
+            // No need for additional code here
+        });
+
+        // Check for success parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            formMessage.textContent = 'Uw bericht is succesvol verzonden. Wij nemen zo spoedig mogelijk contact met u op.';
+            formMessage.classList.add('success');
+        }
+    };
+
+    // Set viewport height variable for mobile browsers
+    const setViewportHeight = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    // Initialize all functions
+    protectEmails();
+    setupContactForm();
+    setViewportHeight();
+
+    // Update viewport height on resize
+    window.addEventListener('resize', setViewportHeight);
 });
