@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         // Add loading state
         form.classList.add('form-loading');
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // TODO: Client-side validation here
 
         // Form submission will be handled by Web3Forms
-        setTimeout(function() {
+        setTimeout(function () {
             // This timeout is just for demo purposes
             // Web3Forms will handle the actual redirect
         }, 1000);
