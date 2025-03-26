@@ -18,13 +18,68 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.pba-kb.nl/terms-and-conditions">
 
-    <script async defer src="https://cookiechimp.com/widget/r2atMEx.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../content/css/style.css" as="style">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cookiechimp.com">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../content/img/pba-kwaliteitsborging-icon.png" type="image/icon type">
+
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --primary-color: #0057a1;
+            --secondary-color: #f7f7f7;
+            --accent-color: #d97800;
+            --text-color: #333;
+            --light-text: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1.5rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="../content/css/style.css">
-    <link rel="icon" href="../content/img/PBA-Kwaliteitsborging-icon.png" type="image/icon type">
+
+    <!-- Cookie management -->
+    <script async defer src="https://cookiechimp.com/widget/r2atMEx.js"></script>
+
+    <!-- Main script -->
     <script src="../content/js/script.js" defer></script>
 </head>
-<!-- Google tag (gtag.js) -->
+<!-- Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9V0G6JW824"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -66,23 +121,35 @@
         <p>Laatst bijgewerkt: 26 maart 2025</p>
 
         <h3>1. Acceptatie van voorwaarden</h3>
-        <p>Door gebruik te maken van de website pba-kb.nl (hierna: "de website") stemt u in met deze gebruiksvoorwaarden. Als u niet akkoord gaat met deze voorwaarden, verzoeken wij u geen gebruik te maken van onze website.</p>
-        <p>Deze gebruiksvoorwaarden hebben uitsluitend betrekking op het gebruik van de website. Voor onze professionele diensten als kwaliteitsborger gelden afzonderlijke voorwaarden die bij het aangaan van een opdracht met u worden gedeeld.</p>
+        <p>Door gebruik te maken van de website pba-kb.nl (hierna: "de website") stemt u in met deze
+            gebruiksvoorwaarden. Als u niet akkoord gaat met deze voorwaarden, verzoeken wij u geen gebruik te maken van
+            onze website.</p>
+        <p>Deze gebruiksvoorwaarden hebben uitsluitend betrekking op het gebruik van de website. Voor onze professionele
+            diensten als kwaliteitsborger gelden afzonderlijke voorwaarden die bij het aangaan van een opdracht met u
+            worden gedeeld.</p>
         <br>
 
         <h3>2. Informatie op de website</h3>
-        <p>PBA Kwaliteitsborging streeft ernaar de informatie op deze website correct en actueel te houden. Desondanks kunnen wij niet garanderen dat alle informatie op elk moment volledig, juist en actueel is.</p>
-        <p>De informatie op deze website is uitsluitend bedoeld voor algemene informatiedoeleinden en vormt geen advies of aanbod. Er kunnen geen rechten aan worden ontleend.</p>
-        <p>PBA Kwaliteitsborging behoudt zich het recht voor om de inhoud van de website op elk moment aan te passen of te wijzigen zonder voorafgaande kennisgeving.</p>
+        <p>PBA Kwaliteitsborging streeft ernaar de informatie op deze website correct en actueel te houden. Desondanks
+            kunnen wij niet garanderen dat alle informatie op elk moment volledig, juist en actueel is.</p>
+        <p>De informatie op deze website is uitsluitend bedoeld voor algemene informatiedoeleinden en vormt geen advies
+            of aanbod. Er kunnen geen rechten aan worden ontleend.</p>
+        <p>PBA Kwaliteitsborging behoudt zich het recht voor om de inhoud van de website op elk moment aan te passen of
+            te wijzigen zonder voorafgaande kennisgeving.</p>
         <br>
 
         <h3>3. Intellectueel eigendom</h3>
-        <p>Alle intellectuele eigendomsrechten met betrekking tot de inhoud en vormgeving van deze website, waaronder teksten, afbeeldingen, logo's, en de samenstelling daarvan behoren toe aan PBA Kwaliteitsborging of haar licentiegevers.</p>
-        <p>Het is niet toegestaan om zonder voorafgaande schriftelijke toestemming van PBA Kwaliteitsborging de website of enig onderdeel daarvan te reproduceren, distribueren, verspreiden of op enige andere wijze te gebruiken, behalve voor persoonlijk, niet-commercieel gebruik.</p>
+        <p>Alle intellectuele eigendomsrechten met betrekking tot de inhoud en vormgeving van deze website, waaronder
+            teksten, afbeeldingen, logo's, en de samenstelling daarvan behoren toe aan PBA Kwaliteitsborging of haar
+            licentiegevers.</p>
+        <p>Het is niet toegestaan om zonder voorafgaande schriftelijke toestemming van PBA Kwaliteitsborging de website
+            of enig onderdeel daarvan te reproduceren, distribueren, verspreiden of op enige andere wijze te gebruiken,
+            behalve voor persoonlijk, niet-commercieel gebruik.</p>
         <br>
 
         <h3>4. Gebruik van de website</h3>
-        <p>U dient de website te gebruiken in overeenstemming met alle toepasselijke wet- en regelgeving. Het is verboden om:</p>
+        <p>U dient de website te gebruiken in overeenstemming met alle toepasselijke wet- en regelgeving. Het is
+            verboden om:</p>
         <ul>
             <li>De website of bijbehorende systemen te beschadigen, overbelasten of op andere wijze te belemmeren;</li>
             <li>Onbevoegd toegang te verkrijgen tot delen van de website of bijbehorende systemen;</li>
@@ -92,38 +159,55 @@
         <br>
 
         <h3>5. Contactformulier</h3>
-        <p>Via onze website kunt u gebruik maken van een contactformulier. Door het formulier in te vullen en te versturen, stemt u ermee in dat:</p>
+        <p>Via onze website kunt u gebruik maken van een contactformulier. Door het formulier in te vullen en te
+            versturen, stemt u ermee in dat:</p>
         <ul>
             <li>De door u ingevulde gegevens worden gebruikt om contact met u op te nemen;</li>
-            <li>Deze gegevens worden verwerkt in overeenstemming met onze <a href="../privacy-policy">privacyverklaring</a>;</li>
+            <li>Deze gegevens worden verwerkt in overeenstemming met onze <a
+                    href="../privacy-policy">privacyverklaring</a>;
+            </li>
             <li>U geen onjuiste of misleidende informatie verstrekt;</li>
             <li>U geen berichten verstuurt die onrechtmatig, beledigend of ongepast zijn.</li>
         </ul>
         <br>
 
         <h3>6. Links naar andere websites</h3>
-        <p>Onze website kan links bevatten naar websites van derden. Deze links zijn uitsluitend bedoeld voor uw gemak. PBA Kwaliteitsborging heeft geen controle over de inhoud van deze websites en aanvaardt geen aansprakelijkheid voor de inhoud, nauwkeurigheid of functionaliteit ervan.</p>
-        <p>Het plaatsen van links naar onze website op andere websites is toegestaan, mits dit op een eerlijke en rechtmatige wijze gebeurt en geen afbreuk doet aan onze reputatie. PBA Kwaliteitsborging behoudt zich het recht voor om op elk moment te verzoeken een link te verwijderen.</p>
+        <p>Onze website kan links bevatten naar websites van derden. Deze links zijn uitsluitend bedoeld voor uw gemak.
+            PBA Kwaliteitsborging heeft geen controle over de inhoud van deze websites en aanvaardt geen
+            aansprakelijkheid voor de inhoud, nauwkeurigheid of functionaliteit ervan.</p>
+        <p>Het plaatsen van links naar onze website op andere websites is toegestaan, mits dit op een eerlijke en
+            rechtmatige wijze gebeurt en geen afbreuk doet aan onze reputatie. PBA Kwaliteitsborging behoudt zich het
+            recht voor om op elk moment te verzoeken een link te verwijderen.</p>
         <br>
 
         <h3>7. Cookies en privacy</h3>
-        <p>Deze website maakt gebruik van cookies in overeenstemming met onze <a href="../privacy-policy">privacyverklaring</a>. Door gebruik te maken van onze website gaat u akkoord met het gebruik van cookies zoals beschreven in deze verklaring.</p>
-        <p>Voor meer informatie over hoe wij omgaan met uw persoonsgegevens, verwijzen wij u naar onze <a href="../privacy-policy">privacyverklaring</a>.</p>
+        <p>Deze website maakt gebruik van cookies in overeenstemming met onze <a href="../privacy-policy">privacyverklaring</a>.
+            Door gebruik te maken van onze website gaat u akkoord met het gebruik van cookies zoals beschreven in deze
+            verklaring.</p>
+        <p>Voor meer informatie over hoe wij omgaan met uw persoonsgegevens, verwijzen wij u naar onze <a
+                href="../privacy-policy">privacyverklaring</a>.</p>
         <br>
 
         <h3>8. Aansprakelijkheid</h3>
-        <p>PBA Kwaliteitsborging sluit, voor zover wettelijk toegestaan, alle aansprakelijkheid uit voor directe of indirecte schade, van welke aard dan ook, die voortvloeit uit of verband houdt met het gebruik van deze website of de onmogelijkheid om de website te gebruiken.</p>
-        <p>PBA Kwaliteitsborging garandeert niet dat de website zonder onderbrekingen of fouten zal functioneren. De website wordt aangeboden "zoals deze is", zonder enige garantie, expliciet of impliciet.</p>
+        <p>PBA Kwaliteitsborging sluit, voor zover wettelijk toegestaan, alle aansprakelijkheid uit voor directe of
+            indirecte schade, van welke aard dan ook, die voortvloeit uit of verband houdt met het gebruik van deze
+            website of de onmogelijkheid om de website te gebruiken.</p>
+        <p>PBA Kwaliteitsborging garandeert niet dat de website zonder onderbrekingen of fouten zal functioneren. De
+            website wordt aangeboden "zoals deze is", zonder enige garantie, expliciet of impliciet.</p>
         <br>
 
         <h3>9. Toepasselijk recht</h3>
-        <p>Op deze gebruiksvoorwaarden en alle geschillen die voortvloeien uit het gebruik van de website is Nederlands recht van toepassing.</p>
-        <p>Eventuele geschillen zullen worden voorgelegd aan de bevoegde rechter in het arrondissement Noord-Holland.</p>
+        <p>Op deze gebruiksvoorwaarden en alle geschillen die voortvloeien uit het gebruik van de website is Nederlands
+            recht van toepassing.</p>
+        <p>Eventuele geschillen zullen worden voorgelegd aan de bevoegde rechter in het arrondissement
+            Noord-Holland.</p>
         <br>
 
         <h3>10. Wijzigingen</h3>
-        <p>PBA Kwaliteitsborging behoudt zich het recht voor om deze gebruiksvoorwaarden op elk moment te wijzigen. Wijzigingen worden van kracht zodra ze op deze website zijn gepubliceerd.</p>
-        <p>Wij raden u aan om deze gebruiksvoorwaarden regelmatig te raadplegen zodat u op de hoogte bent van eventuele wijzigingen.</p>
+        <p>PBA Kwaliteitsborging behoudt zich het recht voor om deze gebruiksvoorwaarden op elk moment te wijzigen.
+            Wijzigingen worden van kracht zodra ze op deze website zijn gepubliceerd.</p>
+        <p>Wij raden u aan om deze gebruiksvoorwaarden regelmatig te raadplegen zodat u op de hoogte bent van eventuele
+            wijzigingen.</p>
         <br>
 
         <h3>11. Contact</h3>
