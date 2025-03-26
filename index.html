@@ -195,22 +195,61 @@
                     <div class="form-intro">
                         <p>Heeft u vragen over kwaliteitsborging of wilt u een vrijblijvend gesprek? Vul onderstaand
                             formulier in en wij nemen zo snel mogelijk contact met u op.</p>
-                        <p class="form-intro">
-                            Door dit formulier in te vullen gaat u akkoord met onze
-                            <a href="/privacy-policy">privacyverklaring</a>.
-                        </p>
                     </div>
 
-                    <div class="responsive-iframe-container">
+                    <div class="contact-form-container">
+                        <div class="contact-form-header">
+                            <h3>Neem contact met ons op</h3>
+                            <p>Heeft u vragen over kwaliteitsborging of wilt u een vrijblijvend gesprek? Vul onderstaand formulier in en wij nemen zo snel mogelijk contact met u op.</p>
+                        </div>
 
-                        <iframe
-                                src="https://docs.google.com/forms/d/e/1FAIpQLSfJ6FGFH-_wys93vVeRJv_2IZtAUM_YrluRci6bhX-T6OIpOw/viewform?embedded=true"
-                                class="google-form"
-                                frameborder="0"
-                                marginheight="0"
-                                marginwidth="0">
-                            Laden...
-                        </iframe>
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                            <input type="hidden" name="access_key" value="b7ebf568-2c7f-4baf-a935-de662d877615">
+
+                            <!-- Optional settings -->
+                            <input type="hidden" name="subject" value="Nieuw contactverzoek via PBA Kwaliteitsborging">
+                            <input type="hidden" name="redirect" value="https://pba-kb.nl/bedankt.html">
+                            <input type="checkbox" name="botcheck" style="display: none;">
+
+                            <div class="form-group">
+                                <label for="name" class="required-field">Naam</label>
+                                <input type="text" name="name" id="name" placeholder="Uw naam" required>
+                                <span class="field-hint">Vul uw naam in</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Bedrijfsnaam</label>
+                                <input type="text" name="company" id="company" placeholder="Uw bedrijfsnaam (optioneel)">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="required-field">E-mailadres</label>
+                                <input type="email" name="email" id="email" placeholder="Uw e-mailadres" required>
+                                <span class="field-hint">Vul een geldig e-mailadres in</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefoonnummer</label>
+                                <input type="tel" name="phone" id="phone" placeholder="Uw telefoonnummer">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="required-field">Bericht</label>
+                                <textarea name="message" id="message" rows="5" placeholder="Uw bericht" required></textarea>
+                                <span class="field-hint">Vul uw bericht in</span>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">Ik ga akkoord met de <a href="/privacy-policy">privacyverklaring</a></label>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="button primary">Verstuur bericht</button>
+                            </div>
+
+                            <div id="form-message" class="form-message"></div>
+                        </form>
                     </div>
                 </div>
             </div>
