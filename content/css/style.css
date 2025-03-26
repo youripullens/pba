@@ -803,6 +803,76 @@ footer {
     color: var(--gray-text);
 }
 
+/* For contact form grid layout */
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* For contact form grid layout */
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* For footer grid layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* For FAQ details/summary styling */
+.faq-item {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item summary {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+    color: var(--accent-color);
+}
+
+.faq-item p {
+    margin-bottom: 0.5rem;
+    color: var(--gray-text);
+}
+
+/* Footer links layout */
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 /* Input appearance fixes */
 input,
 textarea,
